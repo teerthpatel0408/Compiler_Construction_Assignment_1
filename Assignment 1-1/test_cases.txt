@@ -1,0 +1,50 @@
+Test case : 1
+inputtxt: 
+babbbbabbbabbbaaabba
+(((((a)(b))|((b)(a)))(((a)|(b))?))+)
+((((a)(a))+)(b))
+(((a)(((a)|(b))*))((b)(a)))
+
+output.txt:
+<bab,1><b,0><b,0><bab,1><b,0><bab,1><b,0><baaabba,1>
+
+Test case 2: 
+input.txt: 
+abababaabaaaabaaaaab
+((a)((((a)(b))*)(b)))  
+((((a)(a))+)(b))
+((((a)(b))*)((a)?))
+
+output.txt: 
+<abababa,3><aba,3><a,3><aab,2><a,3><aaaab,2>
+
+Test case 3: 
+input.txt: 
+aababababbbbababbaba
+(((a)(((a)(b))?))(b))
+((((a)(a))+)(b))
+(((((a)(b))|((b)(a)))(((a)|(b))?))+)
+
+output.txt: 
+<aab,2><abababb,3><b,0><bababbaba,3>
+
+Test case 4: 
+input.txt: 
+abbaabaabbaabbbbaa
+(((((a)*)(b))(((a)*)((b)((a)*))))*)
+(((a)+)((b)|((((b)+)(a))?)))
+
+output.txt: 
+<abbaabaabbaabbb,1><b,0><aa,2>
+
+
+Test case 5: 
+input.txt: 
+bbbaabababababbabababab
+(((((a)*)(b))(((a)?)((b)((a)?))))?)
+(((a)+)((b)|((((b)+)(a))?)))
+((((a)(b))*)(a)?)
+(((a)(((a)|(b))*))((b)(a)))
+
+output.txt: 
+<bb,1><b,0><aabababababbabababa,4><b,0>
